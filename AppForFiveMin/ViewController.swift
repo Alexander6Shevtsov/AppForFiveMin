@@ -8,20 +8,20 @@
 import UIKit
 
 final class ViewController: UIViewController {
-
-    @IBOutlet weak var doItLabel: UILabel!
     
-    let doItList = ["Поесть!", "Поспать!", "Прогуляться!", "Поесть и поспать!"]
+    @IBOutlet private weak var doItLabel: UILabel!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
+    private let doItList = [
+        "Поесть",
+        "Поспать",
+        "Прогуляться",
+        "Поесть и поспать",
+        "Погулять с собакой",
+        "Завести собаку",
+        "Завести попугая"
+    ]
+    
     @IBAction func doItButtonPressed(_ sender: Any) {
-        let index = Int.random(in: 0..<doItList.count)
-        let result = doItList[index]
-        
-        doItLabel.text = result
+        doItLabel.text = doItList.randomElement() ?? "Отдыхать"
     }
 }
-
