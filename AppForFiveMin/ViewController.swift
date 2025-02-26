@@ -18,7 +18,8 @@ final class ViewController: UIViewController {
         "Поесть и поспать",
         "Погулять с собакой",
         "Завести собаку",
-        "Завести попугая"
+        "Завести попугая",
+        "Покормить попугая"
     ]
     
     @IBAction func doItButtonPressed(_ sender: Any) {
